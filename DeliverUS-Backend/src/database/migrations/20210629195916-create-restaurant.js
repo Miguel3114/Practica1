@@ -63,6 +63,14 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: new Date()
       },
+      userId:{
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Users'
+          }
+        }
+      },
       restaurantCategoryId: {
         type: Sequelize.INTEGER,
         references: {
